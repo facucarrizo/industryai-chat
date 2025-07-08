@@ -6,7 +6,7 @@
  *
  * - detectLeadIntent - A function that determines if a user message indicates lead intent.
  * - DetectLeadIntentInput - The input type for the detectLeadIntent function.
- * - DetectLeadIntentOutput - The return type for the detectLeadIntent function.
+ * - DetectLeadIntentOutp - The return type for the detectLeadIntent function.
  */
 
 import {ai} from '@/ai/genkit';
