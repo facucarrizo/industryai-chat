@@ -1,0 +1,145 @@
+
+
+{
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true   
+}
+
+    "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "aws.suppressPrompts": {
+      "codeWhispererNewWelcomeMessage": true
+    },
+    "aws.telemetry": false,
+    "betterAlign.surroundSpace": {
+      "arrow": [
+        1,
+        1
+      ],
+      "assignment": [
+        1,
+        1
+      ],
+      "colon": [
+        0,
+        1
+      ],
+      "comment": 2
+    },
+    "console-ninja.captureFunctions": true,
+    "console-ninja.darkTheme.error.decorationAttachmentRenderOptions": {
+      "backgroundColor": null,
+      "border": null,
+      "borderColor": null,
+      "color": "#fe536a",
+      "fontStyle": null,
+      "fontWeight": null,
+      "height": null,
+      "margin": "1em",
+      "textDecoration": null,
+      "width": null
+    },
+    "console-ninja.featureSet": "Community",
+    "console-ninja.fontSize": 16,
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+      "live-server": true
+    },
+    "cSpell.hideAddToDictionaryCodeActions": true,
+    "cSpell.language": "en,es",
+    "cSpell.languageSettings": [],
+    "cSpell.userWords": [
+      "configuracion",
+      "Configuracion",
+      "devkit"
+    ],
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {},
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 16,
+    "editor.fontVariations": false,
+    "editor.fontWeight": "500",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": "active",
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.indentSize": "tabSize",
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.language.brackets": [],
+    "editor.language.colorizedBracketPairs": [
+      [
+        "[",
+        "]"
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "{",
+        "}"
+      ]
+    ],
+    "editor.tokenColorCustomizations": {
+      "comments": "#909090",
+      "functions": "#ed87cb",
+      "keywords": "#89b4f5",
+      "numbers": "#95ffd1",
+      "strings": "#c8da6b",
+      "types": "#c278ff",
+      "variables": "#42cd73"
+    },
+    "json.sortOnSave.enable": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "tabnine.experimentalAutoImports": true,
+    "terminal.integrated.env.osx": {},
+    "terminal.integrated.env.windows": {},
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.fontWeightBold": "bold",
+    "totalTypeScript.hideAllTips": false,
+    "totalTypeScript.hideBasicTips": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 1,
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#014b63",
+      "editor.lineHighlightBorder": "#00f7ff29",
+      // Bracket colors
+      "editorBracketHighlight.foreground1": "#FFD700",
+      "editorBracketHighlight.foreground2": "#44e2c0",
+      "editorBracketHighlight.foreground3": "#179fff",
+      // Active guide colors
+      "editorBracketPairGuide.activeBackground1": "#ffd90080",
+      "editorBracketPairGuide.activeBackground2": "#CC66CC80",
+      "editorBracketPairGuide.activeBackground3": "#87CEFA80",
+      // Inactive guide colors
+      "editorBracketPairGuide.background1": "#ffd90080",
+      "editorBracketPairGuide.background2": "#CC66CC80",
+      "editorBracketPairGuide.background3": "#87CEFA80",
+      "statusBar.background": "#0380aa",
+      "tab.activeBackground": "#3c4f8ec5"
+    },
+    "workbench.colorTheme": "Andromeda Bordered",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editorAssociations": {
+      "*.js": "default"
+    },
+    "errorLens.light": {
+      "jest.runAllTestsFirst": true,
+      "jest.pathToJest": "./node_modules/.bin/jest"
+    },
+    "workbench.tree.enableStickyScroll": true,
+    "amazonQ.telemetry": false,
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+      "*": true,
+      "plaintext": false,
+      "markdown": true,
+      "scminput": false
+    }
