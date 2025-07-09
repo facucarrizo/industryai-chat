@@ -37,16 +37,23 @@ const detectLeadIntentPrompt = ai.definePrompt({
   name: 'detectLeadIntentPrompt',
   input: {schema: DetectLeadIntentInputSchema},
   output: {schema: DetectLeadIntentOutputSchema},
-  prompt: `You are an AI assistant designed to detect lead intent from user messages in a chatbot.
-
-  Analyze the following message to determine if the user is expressing interest in a service or product.
-
-  Message: {{{message}}}
-
-  Respond with a JSON object indicating whether the message indicates lead intent (isLead: boolean) and the reason for your determination (reason: string).
-  If it is determined to be a lead, extract the potential product or service of interest from the message.
-  If you are unsure, default isLead to false.
-  `,
+  prompt:` You are an AI assistant designed to detect lead intent from user messages in a chatbot.
+  
+  Your task is to decide if the user is expressing commercial interest in a service or product.
+  
+  Message: "{{message}}"
+  
+  Return only a JSON object in this format:
+  {
+    "isLead": true or false,
+    "reason": "Brief explanation for your classification."
+  }
+  
+  If you're unsure, return:
+  {
+    "isLead": false,
+    "reason": "No clear intent detected."
+  }`,  
 });
 
 const detectLeadIntentFlow = ai.defineFlow(

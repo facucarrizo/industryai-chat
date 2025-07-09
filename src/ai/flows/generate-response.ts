@@ -31,7 +31,8 @@ const generateResponsePrompt = ai.definePrompt({
   name: 'generateResponsePrompt',
   input: {schema: GenerateResponseInputSchema},
   output: {schema: GenerateResponseOutputSchema},
-  prompt: `{{systemPrompt}}\n\nUser Input: {{{userInput}}}\n\nResponse:`, // Incorporate the system prompt and user input into the prompt.
+  prompt: `You are a helpful assistant.\n\nSystem Instructions:\n{{systemPrompt}}\n\nUser says:\n{{userInput}}\n\nAssistant:`,
+ // Incorporate the system prompt and user input into the prompt.
 });
 
 const generateResponseFlow = ai.defineFlow(
