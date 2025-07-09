@@ -37,6 +37,7 @@ const detectLeadIntentPrompt = ai.definePrompt({
   name: 'detectLeadIntentPrompt',
   input: {schema: DetectLeadIntentInputSchema},
   output: {schema: DetectLeadIntentOutputSchema},
+  model: 'googleai/gemini-1.5-flash-latest',
   prompt:` You are an AI assistant designed to detect lead intent from user messages in a chatbot.
   
   Your task is to decide if the user is expressing commercial interest in a service or product.
@@ -67,5 +68,3 @@ const detectLeadIntentFlow = ai.defineFlow(
     return output!;
   }
 );
-
-
