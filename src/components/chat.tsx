@@ -9,8 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Bot, Send, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { detectLeadIntent } from "@/ai/flows/detect-lead-intent";
-import { generateResponse } from "@/ai/flows/generate-response";
+import { handleMessage } from "@/ai/flows/handle-message";
 import { chatConfig } from "@/lib/config";
 import { LeadForm } from "./lead-form";
 
@@ -59,9 +58,15 @@ export function Chat() {
     setIsLoading(true);
 
     try {
-      const leadIntent = await detectLeadIntent({ message: input });
+      const response = await handleMessage({
+        message: input,
+        // These would come from your CMS or config in a real app
+        sheetId: '1p4s_C9YVqJbE8T3eY4uH36LldBe2mJ3L8i-MtfW6eHg',
+        sheetTab: 'FAQs',
+        systemPrompt: chatConfig.systemPrompt,
+      });
 
-      if (leadIntent.isLead) {
+      if (response.isLead) {
         setMessages((prev) => [
           ...prev,
           {
@@ -72,17 +77,12 @@ export function Chat() {
         ]);
         setShowLeadForm(true);
       } else {
-        const aiResponse = await generateResponse({
-          userInput: input,
-          systemPrompt: chatConfig.systemPrompt,
-        });
-
         setMessages((prev) => [
           ...prev,
           {
             id: (Date.now() + 1).toString(),
             role: "bot",
-            content: aiResponse.response,
+            content: response.reply,
           },
         ]);
       }
